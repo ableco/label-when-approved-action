@@ -1,0 +1,30 @@
+{
+  "name": "label-when-approved",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Label pull requests when approved",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "package": "ncc build --license licenses.txt",
+    "all": "npm run build && npm run format && npm run package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ableco/label-when-approved-action.git"
+  },
+  "author": "engineering@able.co",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "@vercel/ncc": "^0.28.6",
+    "prettier": "^2.3.0",
+    "typescript": "^4.3.2"
+  }
+}

@@ -1,0 +1,21 @@
+name: "Label pull request"
+description: "Label pull request on approval"
+author: "engineering@able.co"
+inputs:
+  repo-token:
+    description: >
+      Token for the repository. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.
+    required: false
+    default: ${{ github.token }}
+  add-label:
+    description: >
+      Label name to add
+  remove-label:
+    description: >
+      Label name to remove
+  approvals:
+    description: >
+      Number of approvals
+runs:
+  using: "node12"
+  main: "dist/index.js"
